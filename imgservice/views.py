@@ -18,7 +18,7 @@ def get_data(request):
         return Response({'error': 'Thiếu giá trị name : '}, status=400)
     # Gọi hàm để phân tích và dự đoán cho sản phẩm "Winter Zipper"
     try:
-        img, slope,product_data = analyze_and_predict(request.data,name)
+        img, slope = analyze_and_predict(request.data,name)
         
         # Tạo một HttpResponse để trả về ảnh trực tiếp
         # response = HttpResponse(img, content_type='image/png')
@@ -28,7 +28,7 @@ def get_data(request):
         img_base64 = base64.b64encode(img.getvalue()).decode('utf-8')
         return Response({
         'image': img_base64,
-        'data': product_data,
+        # 'data': product_data,
         'nameProduct':name
     })
     except Exception as e:

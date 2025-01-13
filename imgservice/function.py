@@ -68,7 +68,7 @@ def analyze_and_predict(data,product_name):
     m = (N * np.sum(x * y) - np.sum(x) * np.sum(y)) / (N * np.sum(x ** 2) - (np.sum(x) ** 2))
     b = (np.sum(y) - m * np.sum(x)) / N
 
-    print(f"Hệ số góc (m): {m}, Điểm cắt (b): {b}")
+    # print(f"Hệ số góc (m): {m}, Điểm cắt (b): {b}")
 
     # so sánh mức độ tăng trưởng trong tương lai
     threshold = 1e-6
@@ -107,7 +107,7 @@ def analyze_and_predict(data,product_name):
     # plt.text(datetime.fromtimestamp(x_max), y_max, f'Intercept (b): {b:.2f}', fontsize=12, ha='right', color='red')
 
     # Đổi tên trục X và Y
-    plt.xlabel('Thời ', fontsize=8)  
+    plt.xlabel('Thời gian ', fontsize=8)  
     plt.ylabel('Số lượng', fontsize=8) 
 
     plt.title(f"Đường hồi quy cho sản phẩm '{product_name}' \n có xu hướng {status["text"]} trong tương lai", fontsize=8)
@@ -126,7 +126,7 @@ def analyze_and_predict(data,product_name):
     # Đóng biểu đồ để giải phóng bộ nhớ
     plt.close(fig)
     
-    return img, m ,product_data
+    return img, m 
 
 # # Gọi hàm để phân tích và dự đoán cho sản phẩm "Winter Zipper"
 # img_base64, slope = analyze_and_predict("Winter Zipper")
