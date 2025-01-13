@@ -21,16 +21,16 @@ def get_data(request):
         img, slope = analyze_and_predict(request.data,name)
         
         # Tạo một HttpResponse để trả về ảnh trực tiếp
-        response = HttpResponse(img, content_type='image/png')
-        response['Content-Disposition'] = 'attachment; filename="chart.png"'
-        return response
+        # response = HttpResponse(img, content_type='image/png')
+        # response['Content-Disposition'] = 'attachment; filename="chart.png"'
+        # return response
         #trả về dạng base64
-        # img_base64 = base64.b64encode(img.getvalue()).decode('utf-8')
-        # return Response({
-        # 'image': img_base64,
-        # # 'data': product_data,
-        # 'nameProduct':name
-    # })
+        img_base64 = base64.b64encode(img.getvalue()).decode('utf-8')
+        return Response({
+        'image': img_base64,
+        # 'data': product_data,
+        'nameProduct':name
+    })
     except Exception as e:
         return Response({'error': str(e)}, status=500)
 
