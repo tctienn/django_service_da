@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-rx+b55&7w2rgrbf((b1&0_u_i7as27$suba22rfjs0ona_y-c6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["qlspservice-production.up.railway.app"]
+ALLOWED_HOSTS = ["171.244.60.77","qlspservice-production.up.railway.app"]
 
 
 # Application definition
