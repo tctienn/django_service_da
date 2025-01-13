@@ -1,7 +1,9 @@
-import pandas as pd
-import numpy as np
+import matplotlib
+matplotlib.use('Agg')  # Sử dụng back-end không yêu cầu GUI
 import matplotlib.pyplot as plt
 import seaborn as sns
+import numpy as np
+import pandas as pd
 from datetime import datetime
 import io
 # import base64
