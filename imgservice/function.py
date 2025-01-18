@@ -105,7 +105,7 @@ def analyze_and_predict(data,product_name):
 
 
     # Hiển thị giá trị độ dốc và điểm cắt trên biểu đồ
-    plt.text(datetime.fromtimestamp(x_min), (y_min+1), f'Slope (m): {m:.10f} ', fontsize=12, ha='left', color=status["color"])
+    # plt.text(datetime.fromtimestamp(x_min), (y_min+1), f'Slope (m): {m:.10f} ', fontsize=12, ha='left', color=status["color"])
     # plt.text(datetime.fromtimestamp(x_max), y_max, f'Intercept (b): {b:.2f}', fontsize=12, ha='right', color='red')
 
     # Đổi tên trục X và Y
